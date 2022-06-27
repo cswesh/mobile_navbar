@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Navigation Bar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-bar">
+            <div class="link active" style="--clr:#1877d2">
+                <img src="Home.png" alt="">
+                <p>Home</p>
+            </div>
+            <div class="link"  style="--clr:#c32aa3">
+                <img src="Like.png" alt="">
+                <p>Likes</p>
+            </div>
+            <div class="link" style="--clr:#25d366">
+                <img src="Search.png" alt="">
+                <p>Search</p>
+            </div>
+            <div class="link" style="--clr:#0a66c2">
+                <img src="Profile.png" alt="">
+                <p>Profile</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        let links = document.getElementsByClassName('link');
+        function removeactive(){
+            for(link of links){
+                link.classList.remove('active')
+            }
+        }
+        for(link of links){
+            link.onclick = function(){
+                removeactive();
+                this.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
